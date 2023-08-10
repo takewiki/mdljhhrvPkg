@@ -96,7 +96,7 @@ ds_voucher_upload <- function(dms_token,file_name="data-raw/模板表上海嘉�
     token = dms_token,
     table_name = 'rds_hrv_src_ds_salary_input',
     r_object = salary_data_excel,
-    append = FALSE
+    append = TRUE
   )
 
   sql = 'insert into rds_hrv_src_ds_salary_history select * from rds_hrv_src_ds_salary  where FNumber in (select FNumber from rds_hrv_src_ds_salary_input)'
@@ -219,7 +219,7 @@ ds_voucher_upload <- function(dms_token,file_name="data-raw/模板表上海嘉�
     token = dms_token,
     table_name = 'rds_hrv_src_ds_socialsecurity_input',
     r_object = socialsecurity_data_excel,
-    append = FALSE
+    append = TRUE
   )
 
   sql = 'insert into rds_hrv_src_ds_socialsecurity_history select * from rds_hrv_src_ds_socialsecurity  where FNumber in (select FNumber from rds_hrv_src_ds_socialsecurity_input)'
@@ -306,7 +306,7 @@ ds_voucher_upload <- function(dms_token,file_name="data-raw/模板表上海嘉�
       token = dms_token,
       table_name = 'rds_hrv_src_ds_nonrddetail_input',
       r_object = nonrddetail,
-      append = FALSE
+      append = TRUE
     )
 
     sql = 'insert into rds_hrv_src_ds_nonrddetail_history select * from rds_hrv_src_ds_nonrddetail  where FNumber in (select FNumber from rds_hrv_src_ds_nonrddetail_input)'
@@ -400,7 +400,7 @@ ds_voucher_upload <- function(dms_token,file_name="data-raw/模板表上海嘉�
     token = dms_token,
     table_name = 'rds_hrv_src_ds_rddetail_input',
     r_object = rddetail,
-    append = FALSE
+    append = TRUE
   )
 
   sql = 'insert into rds_hrv_src_ds_rddetail_history select * from rds_hrv_src_ds_rddetail  where FNumber in (select FNumber from rds_hrv_src_ds_rddetail_input)'
